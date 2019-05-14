@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" style="touch-action: none; overflow: hidden; overscroll-behavior-y: contain; position: fixed;">
   <head>
     <meta charset="utf-8" />
     <link rel="shortcut icon" href="./favicon.ico" />
@@ -7,7 +7,7 @@
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
-    <meta name="theme-color" content="#000000" />
+    <meta name="theme-color" content="#3f62ae" />
     <!--
       manifest.json provides metadata used when your web app is installed on a
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
@@ -26,10 +26,28 @@
     <script async src='https://www.google-analytics.com/analytics.js'></script>
     <script language="javascript" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.8.0/p5.min.js"></script>
     <!-- If you want to add any P5 Libraries, paste them in below -->
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.8.0/addons/p5.dom.min.js"></script>
     <!-- End P5 Library Section -->
   </head>
-  <body>
+  <body style="touch-action: none; overflow: hidden; overscroll-behavior-y: contain; position: fixed;">
     <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+    <script>
+      function preventPullToRefresh(element) {
+          var prevent = false;
+          document.querySelector(element).addEventListener('touchstart', function(e){
+          if (e.touches.length !== 1) { return; }
+          var scrollY = window.pageYOffset || document.body.scrollTop || document.documentElement.scrollTop;
+          prevent = (scrollY === 0);
+          });
+          document.querySelector(element).addEventListener('touchmove', function(e){
+          if (prevent) {
+              prevent = false;
+              e.preventDefault();
+          }
+          });
+      }
+      preventPullToRefresh('#root') // pass #id or html tag into the method
+    </script>
   </body>
 </html>

@@ -1,6 +1,6 @@
 {
   "deploy": {
-    "subdomain": "p5pwa.withkoji.com",
+    "subdomain": "connectzoo.withkoji.com",
     "frontend": {
       "output": "frontend/build",
       "commands": [

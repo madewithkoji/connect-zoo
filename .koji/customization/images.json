@@ -1,6 +1,12 @@
 {
   "images": {
-    "mouse": "https://images.koji-cdn.com/76a58d18-9031-4cf9-871c-b4701b0e2537/f4864534-ede5-40e9-ac53-a81df8a25d77.png"
+    "backgroundImage": "https://images.koji-cdn.com/17691ec1-a9a5-4257-a5c0-fbd2be017511/a86d8c34-f44c-45ec-b2ac-bbbe85ebeacc.jpg",
+    "ball1": "https://image.flaticon.com/icons/svg/578/578387.svg",
+    "ball2": "https://image.flaticon.com/icons/svg/578/578398.svg",
+    "ball3": "https://images.koji-cdn.com/17691ec1-a9a5-4257-a5c0-fbd2be017511/bird.png",
+    "ball4": "https://images.koji-cdn.com/17691ec1-a9a5-4257-a5c0-fbd2be017511/turtle.png",
+    "ball5": "https://images.koji-cdn.com/17691ec1-a9a5-4257-a5c0-fbd2be017511/whale.png",
+    "ball6": "https://images.koji-cdn.com/17691ec1-a9a5-4257-a5c0-fbd2be017511/duck.png"
   },
   "@@editor": [
     {
@@ -10,9 +16,38 @@
       "source": "images.json",
       "fields": [
         {
-          "key": "mouse",
-          "name": "Icon",
-          "description": "Icon that spins on the page",
+          "key": "backgroundImage",
+          "name": "Background Image",
+          "type": "image"
+        },
+        {
+          "key": "ball1",
+          "name": "Ball Image 1",
+          "type": "image"
+        },
+        {
+          "key": "ball2",
+          "name": "Ball Image 2",
+          "type": "image"
+        },
+        {
+          "key": "ball3",
+          "name": "Ball Image 3",
+          "type": "image"
+        },
+        {
+          "key": "ball4",
+          "name": "Ball Image 4",
+          "type": "image"
+        },
+        {
+          "key": "ball5",
+          "name": "Ball Image 5",
+          "type": "image"
+        },
+        {
+          "key": "ball6",
+          "name": "Ball Image 6",
           "type": "image"
         }
       ]

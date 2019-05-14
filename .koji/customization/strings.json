@@ -1,6 +1,7 @@
 {
   "strings": {
-    "content": "Koji P5 Scaffold"
+    "modalText": "End of Trial. Add to your home screen to keep playing",
+    "modalButtonText": "Add to Home Screen"
   },
   "@@editor": [
     {
@@ -10,9 +11,15 @@
       "source": "strings.json",
       "fields": [
         {
-          "key": "content",
-          "name": "Page Content",
-          "description": "The text that is displayed on the page",
+          "key": "modalText",
+          "name": "Modal Text",
+          "description": "The text on the popup that shows up for PWA install.",
+          "type": "text"
+        },
+        {
+          "key": "modalButtonText",
+          "name": "Modal Button Text",
+          "description": "The text on the button that shows up for PWA install.",
           "type": "text"
         }
       ]

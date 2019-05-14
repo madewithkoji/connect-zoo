@@ -1,11 +1,16 @@
 {
   "metadata": {
-    "title": "Koji P5 Scaffold",
-    "description": "A React scaffold modified specifically for Koji. Easily customizable at gokoji.com.",
-    "image": "https://images.koji-cdn.com/025a4ca3-2c61-4cf2-b821-55b7023c47dc/kojireact.png",
-    "icon": "https://objects.koji-cdn.com/025a4ca3-2c61-4cf2-b821-55b7023c47dc/94e432a7-951b-4b41-a726-d5d9fc66c533.ico",
-    "icon192": "",
-    "icon512": "",
+    "title": "Connect Zoo",
+    "name": "Connect Zoo",
+    "short_name": "Connect Zoo",
+    "background_color": "#3f62ae",
+    "theme_color": "#3f62ae",
+    "description": "Select the animals that are in a row to get points!",
+    "image": "https://images.koji-cdn.com/17691ec1-a9a5-4257-a5c0-fbd2be017511/Screenshot-from-2019-05-08-13-16-34.png",
+    "icon": "https://images.koji-cdn.com/17691ec1-a9a5-4257-a5c0-fbd2be017511/turtle.png",
+    "icon192": "https://images.koji-cdn.com/17691ec1-a9a5-4257-a5c0-fbd2be017511/turtle192.png",
+    "icon512": "https://images.koji-cdn.com/17691ec1-a9a5-4257-a5c0-fbd2be017511/turtle.png",
+    "themeColor": "",
     "gaCode": ""
   },
   "@@editor": [
