@@ -21,14 +21,6 @@ function setup() {
     }
     images = [1,2,3,4,5,6].map((n) => loadImage(Koji.config.images[`ball${n}`]));
     backgroundImage = loadImage(Koji.config.images.backgroundImage);
-
-    // setup a pwa install popover
-    if (!window.matchMedia('(display-mode: standalone)').matches) {
-      Koji.on('pwaPromptReady', () => {
-        window.pwaReady = true;
-        setTimeout(() => createModal(), 20000);
-      })
-    }
 }
 
 function windowResized() {
@@ -108,13 +100,6 @@ class Ball {
 
 function draw() {
     background(backgroundImage);
-    if(modalOpen) {
-      if (window.matchMedia('(display-mode: standalone)').matches) {
-        modalOpen = false;
-        overlay.remove(); 
-      }
-      return;
-    }
     balls.forEach((ball) => ball.step());
     fill(0);
     if(!mouseIsPressed) selectedIndex = -1;
@@ -133,19 +118,4 @@ function draw() {
 
 function collidePointCircle(x1, y1, x2, y2, dist) {
     return Math.sqrt((x1-x2)*(x1-x2) + (y1-y2)*(y1-y2)) < dist/2;
-}
-
-function createModal() {
-    modalOpen = true;
-    overlay = createDiv().addClass('overlay');
-    const box = createDiv().addClass('box');
-    const boxtext = createDiv(Koji.config.strings.modalText).addClass('boxtext');
-    const button = createButton(Koji.config.strings.modalButtonText);
-    button.mousePressed(() => {
-        Koji.pwaPrompt();
-    });
-    box.child(boxtext)
-    box.child(button);
-    overlay.child(box);
-    overlay.parent('root');
 }
